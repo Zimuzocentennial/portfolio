@@ -4,10 +4,9 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.render("pageView", {
     pageTitle: "Contact",
-    paragraph: `Contact ipsum dolor sit, amet consectetur adipisicing elit. Officia
-    necessitatibus, sequi pariatur accusamus fugit hic placeat. Odit numquam
-    quaerat maxime nobis corrupti ullam. Doloremque modi fugit ex qui,
-    perspiciatis odit quae maxime eveniet id sed.`,
+    paragraph: `  As a seasoned web developer, I use HTML, CSS and JavaScript to transform design
+    concepts into functional websites, ensuring they are user
+    friendly, responsive and visually appealing. I'd love to hear from you!`,
   });
 });
 
