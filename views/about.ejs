@@ -1,0 +1,71 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Welcome to AssignZee" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <%- include('favicon') -%>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Chizimuzo Etolue | About</title>
+  </head>
+  <body>
+    <%- include('header') -%>
+    <main class="container">
+      <section class="about">
+        <%- include('userAvatar') -%> <%- include('userInfo') -%>
+      </section>
+
+      <a href="#" class="btn btn--center about-button"> Download Resume</a>
+
+      <h2 class="about__header">Recent Projects</h2>
+
+      <!-- PROJECT_CARD -->
+      <section class="grid grid--1x2 about__grid">
+        <article class="card">
+          <!-- CARD_IMAGE -->
+          <img
+            src="images/zimuzo_w300.jpeg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <!-- CARD_TEXT_CONTENT -->
+          <footer class="card__footer">
+            <h3 class="card__title">Portfolio Website</h3>
+            <p class="card__caption">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio nam iste vel laborum voluptatum modi. Quod minima
+              voluptatibus ea, porro, aperiam quaerat libero soluta magni
+              voluptate unde sint laborum amet.
+            </p>
+          </footer>
+        </article>
+
+        <!-- PROJECT_CARD_2 -->
+        <article class="card">
+          <!-- PROJECT_CARD_IMAGE -->
+          <img
+            src="images/dd.jpg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <!-- PROJECT_CARD_TEXT_CONTENT -->
+          <footer class="card__footer">
+            <h3 class="card__title">Dummy Project 2</h3>
+            <p class="card__caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              magni, similique fuga nesciunt fugit corporis. Sed dignissimos
+              velit libero placeat vitae exercitationem veritatis minima illum?
+              Voluptatibus impedit!
+            </p>
+          </footer>
+        </article>
+      </section>
+
+      <a href="/projects" class="btn btn--center about-button">
+        See More Projects</a
+      >
+    </main>
+
+    <%- include('footer') -%>
+  </body>
+</html>

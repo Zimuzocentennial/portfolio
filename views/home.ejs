@@ -1,0 +1,27 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Welcome to AssignZee" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <%- include('favicon') -%>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title><%= webTitle %></title>
+  </head>
+  <body>
+    <%- include('header') -%>
+
+    <main class="container">
+      <section class="hero grid grid--1x2">
+        <%- include('userAvatar') -%>
+
+        <section class="user__content">
+          <%- include('userInfo') -%>
+          <a href="/about" class="hero__button btn"> See more</a>
+        </section>
+      </section>
+    </main>
+
+    <%- include('footer') -%>
+  </body>
+</html>

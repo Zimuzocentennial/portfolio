@@ -1,0 +1,162 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Welcome to AssignZee" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1.0; user-scalable=no"
+    />
+    <%- include('favicon') -%>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Chizimuzo Etolue | <%= pageTitle %></title>
+  </head>
+  <body>
+    <%- include('header') -%>
+
+    <main class="container page-view">
+      <h1><%= pageTitle %></h1>
+
+      <p><%= paragraph %></p>
+
+      <% if (pageTitle == 'Projects'){ %>
+
+      <!-- CARD -->
+      <section class="grid grid--1x2 project__grid">
+        <article class="card">
+          <!-- CARD_IMAGE -->
+          <img
+            src="images/zimuzo_w300.jpeg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <!-- CARD_TEXT_CONTENT -->
+          <footer class="card__footer">
+            <h3 class="card__title">Portfolio Website</h3>
+            <p class="card__caption">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio nam iste vel laborum voluptatum modi. Quod minima
+              voluptatibus ea, porro, aperiam quaerat libero soluta magni
+              voluptate unde sint laborum amet.
+            </p>
+          </footer>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/dd.jpg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <footer class="card__footer">
+            <h3 class="card__title">Dummy Project 2</h3>
+            <p class="card__caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              magni, similique fuga nesciunt fugit corporis. Sed dignissimos
+              velit libero placeat vitae exercitationem veritatis minima illum?
+              Voluptatibus impedit!
+            </p>
+          </footer>
+        </article>
+        <article class="card">
+          <img
+            src="images/dd.jpg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <footer class="card__footer">
+            <h3 class="card__title">Dummy Project 3</h3>
+            <p class="card__caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              magni, similique fuga nesciunt fugit corporis. Sed dignissimos
+              velit libero placeat vitae exercitationem veritatis minima illum?
+              Voluptatibus impedit!
+            </p>
+          </footer>
+        </article>
+        <article class="card">
+          <img
+            src="images/dd.jpg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <footer class="card__footer">
+            <h3 class="card__title">Dummy Project 4</h3>
+            <p class="card__caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              magni, similique fuga nesciunt fugit corporis. Sed dignissimos
+              velit libero placeat vitae exercitationem veritatis minima illum?
+              Voluptatibus impedit!
+            </p>
+          </footer>
+        </article>
+      </section>
+      <% } %> <% if (pageTitle == 'Services'){ %>
+
+      <!-- CARD -->
+      <section class="grid grid--1x2 project__grid">
+        <article class="card">
+          <!-- CARD_IMAGE -->
+          <img
+            src="images/dd.jpg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <!-- CARD_TEXT_CONTENT -->
+          <footer class="card__footer">
+            <h3 class="card__title">Web Development</h3>
+            <p class="card__caption">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio nam iste vel laborum voluptatum modi. Quod minima
+              voluptatibus ea, porro, aperiam quaerat libero soluta magni
+              voluptate unde sint laborum amet.
+            </p>
+          </footer>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/dd.jpg"
+            alt="Project Card Image"
+            class="card__image"
+          />
+          <footer class="card__footer">
+            <h3 class="card__title">Dummy Service 2</h3>
+            <p class="card__caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              magni, similique fuga nesciunt fugit corporis. Sed dignissimos
+              velit libero placeat vitae exercitationem veritatis minima illum?
+              Voluptatibus impedit!
+            </p>
+          </footer>
+        </article>
+      </section>
+
+      <a href="/contact" class="btn btn--center service-button">Let's Talk</a>
+      <% } %> <% if(pageTitle == 'Contact'){ %>
+
+      <form action="" method="post" class="form">
+        <div class="form__group">
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+          <input type="text" placeholder="Email address" />
+          <input type="text" placeholder="Contact number" />
+          <textarea
+            name="message"
+            id=""
+            rows="12"
+            placeholder="Message"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn contact-button btn--center">
+          Send message
+        </button>
+      </form>
+
+      <% } %>
+    </main>
+
+    <%- include('footer') -%>
+  </body>
+</html>

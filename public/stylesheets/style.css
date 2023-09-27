@@ -1,8 +1,416 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*-----------------------------------------------------------*/
+/*------------------------ FONTS ----------------------------*/ 
+/*-----------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Josefin+Sans&display=swap');
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ UTILITIES ------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+:root{
+  --primary-color:#707070;
+  --primary-light:#707070af;
+  --secondary-color: #ED6C2D;
+  --secondary-light: #ed6d2d22;
+  --grid-gap: 5rem;
+  --border-color:#BFBFBF;
+  --font-stack: 'Josefin Sans', 'Gill Sans', Arial, Helvetica, sans-serif
 }
 
-a {
-  color: #00B7FF;
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.colorize--secondary{
+  color: var(--secondary-color);
+}
+
+.container{
+  max-width: 1140px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.grid{
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+
+  .grid--1x2{
+    grid-template: auto / 1fr 1fr;
+  }
+
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------- Gobal Style Set Up --------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+body{
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font-family:  var(--font-stack);
+  font-size: 2.2rem;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+::placeholder, input[type='text'], textarea{
+  font-family: var(--font-stack);
+  font-size: 1.8rem;
+}
+
+::placeholder{
+  color: rgba(128, 128, 128, 0.696);
+}
+
+::selection{
+  background-color: var(--secondary-light);
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ HEADINGS -------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+h1{
+  font-size: 3.8rem ;
+  margin-bottom: 2rem;
+}
+
+h2{
+  font-size: 2.8rem;
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ NAVIGATIONS ----------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+#logo{
+  color: var(--primary-color);
+  margin: 1.5rem 0;
+  font-family: 'Croissant One', Georgia, 'Times New Roman', Times, serif;
+  font-size: 3rem;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav__list{
+  margin: 2rem 0;
+  list-style: none;
+  width: 100%; 
+}
+
+.nav__item{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nav__item > a {
+  padding-bottom: .5rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+ .nav__item a:hover{
+  border-bottom: 2.5px solid var(--secondary-color);
+}
+
+
+@media screen and (min-width: 768px) {
+
+  body{
+    font-size: 2rem;
+  }
+  .nav__list{
+    display: flex;
+    width: auto;
+  }
+
+  .nav__item{
+    margin-left: 4rem;
+  }
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ HERO SECTION ---------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+.hero{
+  margin: 8rem 0;
+}
+
+.user__image{
+  height: 40vw;
+  width: 40vw;
+  background-color: var(--primary-color);
+  background-image: url(/images/zimuzo.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  justify-self: center;
+}
+
+.user {
+  text-align: center;
+}
+
+.user__name{
+  margin-bottom: .5rem;
+ 
+}
+
+.user__pronoun{
+  margin-bottom: 1.5rem;
+  color: var(--primary-light) ;
+}
+
+.user__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media screen and (max-width:394px) {
+  .user__name{
+    font-size: 2.5rem;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+
+  .user__image{
+    height: 35rem;
+    width: 35rem;
+    margin-right: 2.5rem;
+  }
+  
+  .user {
+    text-align: initial;
+  }
+
+  .user__content{
+    align-items: start;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+
+  .user__image{
+    height: 42rem;
+    width: 42rem;
+  }
+   
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ BUTTON ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+.btn{
+  color: white;
+  background-color: var(--secondary-color);
+  padding: 1.5rem 5rem;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  display: inline-block;
+  border: none;
+}
+
+.btn--center{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn:hover{
+  background-color: #d56228;
+}
+
+/*-----------------------------------------------------------*/
+/*------------------------ ABOUT ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+.grid.about__grid{
+  gap: var(--grid-gap);
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 0 5rem 0;
+}
+
+.about .user{
+  text-align: center;
+}
+
+.about .user__bio{
+  max-width: 768px;
+}
+
+.about__header{
+  text-align: center;
+  color: var(--secondary-color);
+  padding: .5rem 0 3rem 0;
+  border-bottom: 2.5px solid var(--secondary-light);
+  margin-bottom: 7rem;
+}
+
+.about-button{
+  margin: 10rem 0 5rem 0;
+}
+
+.about-button:first-of-type {
+  margin: 0 0 8rem 0;
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ CARD ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+.card{
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image{
+  width: inherit;
+  height: 30rem;
+}
+
+.card__title{
+  margin-bottom: 1rem;
+}
+
+.card__footer{
+  flex-basis: 100%;
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ FOOTER ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+.footer{
+  background-color: var(--secondary-light);
+  padding: 4rem 0;
+  color: var(--secondary-color);
+  bottom: 0;
+  margin-top: auto;
+}
+
+.copyright{
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ PROJECT ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+.grid.project__grid{
+  margin: 8rem 0;
+  gap: var(--grid-gap);
+}
+
+.container.page-view{
+  margin-top: 4rem;
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ SERVICE ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+.service-button{
+  margin: 0 0 8rem 0;
+}
+
+
+/*-----------------------------------------------------------*/
+/*------------------------ INPUTS ---------------------------*/ 
+/*-----------------------------------------------------------*/
+
+
+.form input[type='text'], textarea{
+  display: block;
+  margin: 0 auto 4rem auto;
+  border-radius: 1rem;
+  border: 1.5px solid var(--border-color);
+  padding: 2.5rem 2rem;
+  width: 90%;
+  outline: none;
+  color: var(--secondary-color);
+}
+
+
+.contact-button{
+  margin: 0 0 8rem 0;
+  font-size: inherit;
+  font-family: var(--font-stack);
+}
+
+.form__group{
+  margin-top: 8rem;
+}
+
+input[type='text']:focus, textarea:focus{
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 .6rem var(--secondary-light);
+}
+
+
+@media screen and (min-width:768px) {
+  .form input[type='text'], textarea{
+    width: 55%;
+  }
 }
