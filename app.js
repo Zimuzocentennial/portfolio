@@ -1,3 +1,14 @@
+/** 
+File Name: app.js
+Student Name: Chizimuzo Etolue
+Student ID: 301279946
+Date: September 28, 2023
+
+This file contains a centralized Express server and middlewares that
+this portfolio website development project depends on.
+
+*/
+
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");

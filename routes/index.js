@@ -1,3 +1,13 @@
+/*
+File Name: index.js
+Student Name: Chizimuzo Etolue
+Student ID: 301279946
+Date: September 28, 2023
+
+This is the central Express router that contains all
+the routes used in my portfolio web development project.
+*/
+
 var express = require("express");
 var router = express.Router();
 
