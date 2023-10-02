@@ -54,7 +54,7 @@ html{
 
 
 /*-----------------------------------------------------------*/
-/*------------------- Gobal Style Set Up --------------------*/ 
+/*------------------- Global Style Set Up --------------------*/ 
 /*-----------------------------------------------------------*/
 
 
@@ -397,6 +397,23 @@ h2{
   margin: 0 0 8rem 0;
   font-size: inherit;
   font-family: var(--font-stack);
+}
+
+.contact__socials{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact__socials > a{
+  padding: .5rem 2rem;
+  border-radius: .4rem;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem 1rem 0 0;
+
 }
 
 .form__group{
